@@ -1,0 +1,18 @@
+*Mô t? trò choi:
+-Có m?t hình vuông du?c chia thành 9x9 ô vuông con. M?i ô vuông con có giá tr? trong kho?ng t? 1 d?n 9. Ban d?u hình vuông có m?t s? ô vuông con cho tru?c (có di?n s?n s?) và còn l?i là tr?ng. Hãy di?n các s? t? 1-9 vào các ô con l?i sao cho: hàng ngang là các s? khác nhau t? 1 d?n 9, hàng d?c là các s? khác nhau t? 1 d?n 9, và m?i kh?i 3x3 chính là các s? khác nhau t? 1 d?n 9.
+
+*Mô t? thu?t toán:
+- Ý tu?ng c?a thu?t toán cung gi?ng bài toán n quân h?u. M?i bu?c tìm t?p các giá tr? kh? di d? di?n vào ô tr?ng, và sau dó d? quy d? di?n ô ti?p theo. 
+
+*Th? t? công vi?c:
+-1st: Ch?y 81 ô - các ô dã di?n (Ma tr?n 9x9)
+-2nd: ki?m tra n?u ô # 0, gán ô dó =1
+-3rd: Xây d?ng hàm: Feasible(Arr,x,y,k) ki?m tra k có kh? di v?i ô
+Arr[x][y] không.
+-4th: N?u h?p l? quay l?i bu?c 2.
+-5th: Ki?m tra không h?p l?, tang giá tr? ô dó + 1, quay l?i 
+bu?c 3. N?u ô dó có giá tr? = 9 reset ô dó = 0, dùng 
+backtracking quay l?i ô tru?c và tang giá tr? ô dó +1, sau dó
+quay l?i bu?c 3.
+-6th: duy?t l?n lu?t d?n cu?i m?ng.
+
