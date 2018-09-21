@@ -1,18 +1,19 @@
-*M� t? tr� choi:
--C� m?t h�nh vu�ng du?c chia th�nh 9x9 � vu�ng con. M?i � vu�ng con c� gi� tr? trong kho?ng t? 1 d?n 9. Ban d?u h�nh vu�ng c� m?t s? � vu�ng con cho tru?c (c� di?n s?n s?) v� c�n l?i l� tr?ng. H�y di?n c�c s? t? 1-9 v�o c�c � con l?i sao cho: h�ng ngang l� c�c s? kh�c nhau t? 1 d?n 9, h�ng d?c l� c�c s? kh�c nhau t? 1 d?n 9, v� m?i kh?i 3x3 ch�nh l� c�c s? kh�c nhau t? 1 d?n 9.
+*Mô tả trò choi:
+-Có một hình vuông được chia thành 9x9 ô vuông con. Mỗi ô vuông con có giá trị trong khoảng từ 1 đến 9. Ban đầu hình vuông có một số ô vuông con cho truớc (có điền sẵn số) và còn lạii là ô trống. Hãy điền các số theo thứ tự 1-9 vào các ô con làm sao cho: hàng ngang là các số khác nhau từ 1 đến 9, hàng dọc là các số khác nhau từ 1 đến 9, và mỗi khối 3x3 chính là các số khác nhau từ 1 đến 9.
 
-*M� t? thu?t to�n:
-- � tu?ng c?a thu?t to�n cung gi?ng b�i to�n n qu�n h?u. M?i bu?c t�m t?p c�c gi� tr? kh? di d? di?n v�o � tr?ng, v� sau d� d? quy d? di?n � ti?p theo. 
+*Mô tả thuật toán:
+- Ý tưởng thuật toán cung giống bài toán n quân hậu. Mỗi bước tìm tập các giá trị khả dĩ để điền vào ô trống, và sau dó đệ quy để điền ô tiếp theo. 
 
-*Th? t? c�ng vi?c:
--1st: Ch?y 81 � - c�c � d� di?n (Ma tr?n 9x9)
--2nd: ki?m tra n?u � # 0, g�n � d� =1
--3rd: X�y d?ng h�m: Feasible(Arr,x,y,k) ki?m tra k c� kh? di v?i �
-Arr[x][y] kh�ng.
--4th: N?u h?p l? quay l?i bu?c 2.
--5th: Ki?m tra kh�ng h?p l?, tang gi� tr? � d� + 1, quay l?i 
-bu?c 3. N?u � d� c� gi� tr? = 9 reset � d� = 0, d�ng 
-backtracking quay l?i � tru?c v� tang gi� tr? � d� +1, sau d�
-quay l?i bu?c 3.
--6th: duy?t l?n lu?t d?n cu?i m?ng.
+*Thứ tự công việc:
+
+-1st: Chạy 81 ô - các ô dã điền (Ma trận 9x9)
+-2nd: Kiểm tra nếu ô # 0, gán ô dó =1
+-3rd: Xây dựng hàm: Feasible(Arr,x,y,k) kiểm tra k có khả dĩ với ô
+Arr[x][y] không.
+-4th: Nếu hợp lệ quay lai bước 2.
+-5th: Kiểm tra không hợp lệ, tang giá trị ô dó + 1, quay lui 
+bước 3. Nếu ô dó có giá trị = 9 reset ô dó = 0, dùng 
+backtracking quay lại ô truớc và tang giá trị ô dó +1, sau dó
+quay lại buớc 3.
+-6th: duyệt lần luợt đến cuối mảng.
 
