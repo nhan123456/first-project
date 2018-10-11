@@ -1,21 +1,18 @@
 #include <stdio.h>
 #define SIZE 9 //kich thuoc o sudoku la SIZE x SIZE
-#define DELTA 2
-int a[SIZE + DELTA][SIZE + DELTA];
+
 int n = SIZE;
-int lastK;
 
 int Nhap(); //nhap de bai sudoku
 int Xuat(); //xuat bang sudoku
 int isOK(int i, int j, int x); //kiem tra xem vi tri i, j dat gia tri x co hop le khong
-int findLastK(); //tra ve chi so k cuoi cung ma khong phai la de bai
+
 
 int main()
 {
-	printf("Nhap so lieu de bai...n");
+	printf("Nhap so lieu de bai...");
 	Nhap();
-	lastK = findLastK();
-	printf("De bai:n");
+	printf("De bai:");
 	Xuat();
 	printf("Bam enter de bat dau giai...");
 	getchar();
